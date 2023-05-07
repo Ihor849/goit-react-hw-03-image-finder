@@ -5,15 +5,15 @@ export const SearchForm = styled.form`
   width: 100%;
   max-width: 600px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
 `;
 export const SearchFormButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border: 0;
 
   background-repeat: no-repeat;
@@ -27,27 +27,17 @@ export const SearchFormButton = styled.button`
   }
 `;
 export const ButtonLabel = styled.span`
-  /* position: absolute; */
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  /* white-space: nowrap; */
-  /* clip-path: inset(50%); */
-  /* border: 0; */
+  width: 30px;
+  height: 30px;
+  padding: 15px;
 `;
 export const FormInput = styled.input`
   display: inline-block;
-  width: 100%;
+  width: 600px;
   font: inherit;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-  :placeholder {
-    font: inherit;
-    font-size: 18px;
-  }
 `;

@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ReactComponent as SearchButton } from '../icons/SearchButton.svg';
 import { Component } from 'react';
 
@@ -15,7 +15,6 @@ export class Searchbar extends Component {
   };
   handleChange = e => {
     this.setState({ query: e.target.value.toLowerCase() });
-    console.log(e.target.value);
   };
 
   handleSubmit = e => {
@@ -24,7 +23,7 @@ export class Searchbar extends Component {
       return alert('введите');
     }
     this.props.onSubmit(this.state.query.trim());
-    console.log(this.state.query);
+
     this.setState({ query: '' });
   };
 
@@ -37,9 +36,6 @@ export class Searchbar extends Component {
               <SearchButton />
             </ButtonLabel>
           </SearchFormButton>
-          {/* <SearchFormButton type="submit" className="button">
-            <ButtonLabel className="button-label">Search</ButtonLabel>
-          </SearchFormButton> */}
 
           <FormInput
             className="input"
@@ -56,7 +52,7 @@ export class Searchbar extends Component {
   }
 }
 
-// Searchbar.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   children: PropTypes.node,
-// };
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+};

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
+import PropTypes from 'prop-types';
 import { Overlay, ModalImg } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -9,7 +10,7 @@ export class Modal extends Component {
     window.addEventListener('keydown', this.nandleKeyDown);
   }
   componentWillUnmount() {
-    console.log('Modal componentWillUnmount');
+    // console.log('Modal componentWillUnmount');
     window.removeEventListener('keydown', this.nandleKeyDown);
   }
 
@@ -35,3 +36,7 @@ export class Modal extends Component {
     );
   }
 }
+Modal.propTypes = {
+  image: PropTypes.object,
+  onClose: PropTypes.func,
+};

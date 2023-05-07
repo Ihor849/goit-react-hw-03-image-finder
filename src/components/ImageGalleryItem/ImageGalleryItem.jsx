@@ -1,4 +1,4 @@
-// import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Item, Image } from './ImageGalleryItem.styled';
 import { Component } from 'react';
 import { Modal } from 'components/Modal/Modal';
@@ -28,9 +28,6 @@ export class ImageGalleryItem extends Component {
   }
 }
 
-// ContactItem.propTypes = {
-//   name: propTypes.string.isRequired,
-//   id: propTypes.string.isRequired,
-//   number: propTypes.string.isRequired,
-//   onDelete: propTypes.func.isRequired,
-// };
+ImageGalleryItem.propTypes = {
+  item: PropTypes.object,
+};
