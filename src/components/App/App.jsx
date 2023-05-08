@@ -20,12 +20,11 @@ export class App extends Component {
     error: '',
   };
   handleSubmit = async searchQuery => {
-    const { page } = this.state;
     this.setState({ query: searchQuery, page: 1 });
 
     try {
       this.setState({ status: 'pending' });
-      const { hits, totalHits } = await fetchImages(searchQuery, page);
+      const { hits, totalHits } = await fetchImages(searchQuery, 1);
       // console.log(hits, totalHits);
       if (hits.length < 1) {
         this.setState({ status: 'idle', totalHits: 0 });
